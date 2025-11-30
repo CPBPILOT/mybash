@@ -1,18 +1,13 @@
-#format = '''
-#[┌───────────────────>](bold green)
-#[│](bold green)$directory$rust$package
-#[└─>](bold green) '''
-
 format = """
-[](fg:#304c7a)\
+[](#3B4252)\
 $python\
 $username\
-[](fg:#304c7a bg:#c72138)\
+[](bg:#434C5E fg:#3B4252)\
 $directory\
-[](fg:#c72138 bg:#e06236)\
+[](fg:#434C5E bg:#4C566A)\
 $git_branch\
 $git_status\
-[](fg:#e06236 bg:#d7a64b)\
+[](fg:#4C566A bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -23,37 +18,36 @@ $julia\
 $nodejs\
 $nim\
 $rust\
-[](fg:#d7a64b bg:#63566a)\
+[](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-[](fg:#63566a bg:#f4f5f7)\
+[](fg:#06969A bg:#33658A)\
 $time\
-[](fg:#f4f5f7)
-[󱞪 ](#d7a64b)\
+[ ](fg:#33658A)\
 """
 command_timeout = 5000
 # Disable the blank line at the start of the prompt
-#add_newline = false
+# add_newline = false
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#304c7a"
-style_root = "fg:#FF3B30 bg:#304c7a"
+style_user = "bg:#3B4252"
+style_root = "bg:#3B4252"
 format = '[$user ]($style)'
 
 [directory]
-style = "bg:#c72138"
+style = "bg:#434C5E"
 format = "[ $path ]($style)"
-truncation_length = 15
+truncation_length = 3
 truncation_symbol = "…/"
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-#"Documents" = "󰈙 "
-#"Downloads" = " "
-#"Music" = " "
-#"Pictures" = " "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
@@ -62,74 +56,74 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#63566a"
+style = "bg:#06969A"
 format = '[ $symbol $context ]($style)$path'
 
 [elixir]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#e06236"
+style = "bg:#4C566A"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#e06236"
+style = "bg:#4C566A"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = " "
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
-style = "bg:#584E59"
+style = "bg:#3B4252"
 format = '[(\($virtualenv\) )]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#d7a64b"
+style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#f4f5f7 fg:#304c7a"
+style = "bg:#33658A"
 format = '[ $time ]($style)'
